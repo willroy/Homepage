@@ -1,0 +1,71 @@
+body {
+    background-color: #5A7381;
+}
+h2 { 
+    font-family: Century Gothic, sans-serif;
+    font-size: 30px; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 100; 
+    line-height: 69px; 
+   }
+h6 {
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+#search {
+
+}
+
+#search input[type="text"] {
+    background: no-repeat 10px 6px #4A5F69;
+    border: 0 none;
+    font: bold 12px Arial,Helvetica,Sans-serif;
+    color: #777;
+    width: 150px;
+    padding: 6px 15px 6px 35px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 3px rgba(0, 0, 0, 0.2) inset;
+    -webkit-transition: all 0.7s ease 0s;
+    -moz-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
+    input:focus {!important};
+    
+
+    }
+
+#search input[type="text"]:focus {
+    width: 200px;
+    }
+span.crosshair {
+        cursor: crosshair;
+    }
+
+input:focus { outline:0 !important; }
+.button {
+    background-color: #4A5F69 !important;
+    border-color: #4A5F69;
+}
+.button:hover {
+    box-shadow: inset 0 0 0 3px #DBDBDB;
+    transition: all 0.5s ease       
+}
+
+.box {
+    border:solid; 
+    background-color: #536A76; 
+    border-width: 50px; 
+    border-color: #536A76;
+    border-radius: 25px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);}
+}

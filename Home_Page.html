@@ -1,0 +1,81 @@
+<html>
+<head>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--stylesheets and device info-->
+    <title>HomePage</title>
+    <!--Clock javascript down here-->
+    <script>
+        function startTime() {
+            var sheet = document.createElement('style')
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            var output = [];
+            m = checkTime(m);
+            s = checkTime(s);
+            if (h > 12) {
+                h = h - 12;
+                document.getElementById('txt').innerHTML =
+                h + ":" + m + ":" + s + "  pm";
+                var t = setTimeout(startTime, 500); 
+            }
+            else {
+                document.getElementById('txt').innerHTML =
+                h + ":" + m + ":" + s + "  am ";
+                var t = setTimeout(startTime, 500);                
+            }
+            
+
+        }
+        function checkTime(i) {
+            if (i < 10) {i = "0" + i}; 
+            return i;
+        }
+    </script>
+</head>
+<body onload="startTime()">
+    <h6>   Created By William Roy, 2017</h6>
+    &nbsp;
+    &nbsp;
+    <!--contained in center tag-->
+    <center>
+    <!--The div for the clock box and clock-->
+    <div id="txt" style="width: 320px;
+        background-color: #536B76;
+        padding: 10px;
+        border: 5px solid #536A76;
+        margin: 0;
+        text-align: center;
+        border-radius: 12px;
+    ;"></div>
+    <!--Main content box-->
+    <div id="divActivites" name="divActivites" class="box" style="">
+        <!--title-->
+        <h2 style="color: #bfbfbf;">Home Page</h2>
+        <!--Search bar (google results redirect)-->
+        <form method="get" action="http://www.google.com/search" id="search">
+            <div style="border:padding:4px;width:15em;">
+                <table border="0" cellpadding="0">
+                    <tr><td>
+                    <input type="text" name="q" size="40" 
+                    maxlength="255" value="      Search" id="searchbox" 
+                                    onfocus="if(this.value==this.defaultValue)this.value=''; this.style.color='black';" onblur="if(this.value=='')this.value=this.defaultValue; " autofocus/>
+                    <input type="hidden" name="sitesearch" value="" /></td></tr>
+                </table>
+            </div>
+        </form>
+        <div class="btn-group-vertical">
+            <a href="#" class="btn btn-default button">Button 1</a> 
+            <a href="#" class="btn btn-default button">Button 2</a> 
+            <a href="#" class="btn btn-default button">Button 3</a> 
+            <a href="#" class="btn btn-default button">Button 4</a>
+            <a href="#" class="btn btn-default button">Button 5</a>
+            <a href="#" class="btn btn-default button">Button 6</a>
+        </div>
+    </center>
+    </div>
+</body>
+</html>
